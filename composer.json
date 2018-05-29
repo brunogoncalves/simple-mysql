@@ -1,0 +1,25 @@
+{
+    "name"       : "brunogoncalves/simple-mysql",
+    "description": "Conexão com o mysql via PDO.",
+    "license"    : "MIT",
+
+    "authors": [
+        {
+            "name" : "Bruno Goncalves",
+            "email": "bugotech@gmail.com"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.5.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "SimpleMySQL": "src/"
+        }
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable"    : true
+}
