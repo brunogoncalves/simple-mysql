@@ -1,6 +1,6 @@
 {
     "name"       : "brunogoncalves/simple-mysql",
-    "description": "Conexão com o mysql via PDO.",
+    "description": "Conexao com o mysql via PDO.",
     "license"    : "MIT",
 
     "authors": [
