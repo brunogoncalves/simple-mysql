@@ -74,6 +74,22 @@ class Database
     /**
      * @param $query
      * @param array $bindings
+     * @return mixed
+     */
+    public function queryOne($query, $bindings = [])
+    {
+        $sta = $this->pdo->prepare($query);
+
+        $this->bindValues($sta, $bindings);
+
+        $sta->execute();
+
+        return $sta->fetch();
+    }
+
+    /**
+     * @param $query
+     * @param array $bindings
      * @return bool
      */
     public function insert($query, $bindings = [])
