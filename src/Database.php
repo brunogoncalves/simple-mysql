@@ -29,7 +29,7 @@ class Database
     {
         $options = array_merge([], $this->defaultOptions, $options);
 
-        $config = compact($host, $database, $username, $password, $port);
+        $config = compact('host', 'database', 'username', 'password', 'port');
 
         $dns = $this->getDsn($config);
 
@@ -68,7 +68,7 @@ class Database
 
         $sta->execute();
 
-        return $sta->fetchAll();
+        return $sta->fetchAll(PDO::FETCH_OBJ);
     }
 
     /**
@@ -84,7 +84,7 @@ class Database
 
         $sta->execute();
 
-        return $sta->fetch();
+        return $sta->fetch(PDO::FETCH_OBJ);
     }
 
     /**
